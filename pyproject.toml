@@ -1,0 +1,28 @@
+[project]
+name = "agents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "gradio>=5.22.0",
+    "httpx>=0.28.1",
+    "lxml>=5.3.1",
+    "openai>=1.68.2",
+    "openai-agents>=0.0.15",
+    "playwright>=1.51.0",
+    "plotly>=6.0.1",
+    "psutil>=7.0.0",
+    "pypdf>=5.4.0",
+    "pypdf2>=3.0.1",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+    "setuptools>=78.1.0",
+    "chromadb>=1.0.12",
+    "pymupdf>=1.26.0"
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
