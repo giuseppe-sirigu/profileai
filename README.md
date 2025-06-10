@@ -1,10 +1,19 @@
 # ProFile AI
 ### An Interactive Professional Profile power by Agentic AI
 
+<div style="text-align: center;">
+    <img src="profileai.png" alt="Description" width="70%"/>
+</div>
+
 This project uses the following technologies for whch you would need an account and in some cases to buy credits (or you can adapt the code to use free APIs):
 * ChatGPT API - you can replace this with any other LLM API or even with [Ollama](https://ollama.com/)
 * [Pushover](https://pushover.net/) a simple push notification service that has a limited free trial
 * ChromaDB
+
+The `ProfileAi` class expects at least three data sources:
+* A PDF file containing your linkedin profile
+* A PDF file containing your CV or Resume
+* A txt file containing a paragraph-long summary of your professional profile. It is ok to add also some more personal details here.
 
 ## Download the code
 
@@ -31,6 +40,7 @@ Your .env file should contain the following; add whichever keys you would like t
 OPENAI_API_KEY=sk-proj-...
 PUSHOVER_USER=...
 PUSHOVER_TOKEN=...
+RAG_ENABLED=True (False)
 ```
 
 ## Run the application
