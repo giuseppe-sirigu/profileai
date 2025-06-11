@@ -18,7 +18,7 @@ def record_user_details(email, name, notes="not provided"):
 
 record_user_details_json = {
     "name": "record_user_details",
-    "description": "Use this tool to record that a user is interested in being in touch and provided their name and an email address. Make sure to have both name and email; do not infer name from email but ask for it.",
+    "description": "Use this tool to record that a user is interested in being in touch and provided their name and an email address. Make sure to have both name and email. You must ask the user for their preferredname before calling this tool. Do not assume the name of the user based on the email address.",
     "parameters": {
         "type": "object",
         "properties": {

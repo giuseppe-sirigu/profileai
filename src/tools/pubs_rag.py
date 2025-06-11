@@ -23,7 +23,7 @@ def retrieve_docs(query, top_k=5, section_filter=None):
         n_results=top_k,
         where=filters if filters else None
     )
-    print(results)
+    
     return results["documents"][0]  # list of retrieved text chunks
 
 def rag_agent(question):
@@ -37,7 +37,7 @@ def rag_agent(question):
 
 rag_agent_json = {
     "name": "rag_agent",
-    "description": "Always use this tool to retrieve information related to the publications.",
+    "description": "Always use this tool to retrieve information related to the publications. Even if you think you know the answer, use this tool to retrieve the information from the publications.",
     "parameters": {
         "type": "object",
         "properties": {
