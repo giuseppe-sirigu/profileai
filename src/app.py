@@ -23,4 +23,14 @@ if __name__ == "__main__":
     initial_messages = [{"role": "assistant", "content": f"Hello! I can answer questions about my career, background, skills and experience. How can I help you today?"}]
 
     chatbot = gr.Chatbot(value=initial_messages, type='messages')
-    gr.ChatInterface(me.chat, type="messages", chatbot=chatbot).launch()
+    gr.ChatInterface(
+        me.chat,
+        type="messages",
+        chatbot=chatbot,
+        css="""
+            footer { display: none !important; }
+            #theme-toggle, .theme-toggle, [data-testid="settings-btn"] {
+                display: none !important;
+            }
+        """
+    ).launch(show_api=False, share=False, show_error=False)
